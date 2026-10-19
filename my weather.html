@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Weather App</title>
+
+    <style>
+        /* Basic page setup */
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Page background using modern deep purple / dark blue tones */
+        body {
+            background-color: #1a1e36;
+            background-image: radial-gradient(circle, #ffffff22 2px, transparent 3px);
+            background-size: 35px 35px;
+            background-repeat: repeat;
+            background-position: top center;
+            background-attachment: fixed;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Heading styling */
+        h1 {
+            color: #70a1ff;
+            margin-bottom: 5px;
+        }
+
+        /* Main Weather Card with sunset purple/blue gradient */
+        .weather-card {
+            max-width: 380px;
+            margin: 20px auto;
+            padding: 25px;
+            border: 2px solid #5352ed;
+            border-radius: 20px;
+            background-image: linear-gradient(to bottom right, #3742fa, #2ed573);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Floating weather animation */
+        .weather-icon {
+            font-size: 60px;
+            margin: 10px 0;
+            animation: floatCloud 3s infinite alternate ease-in-out;
+        }
+
+        @keyframes floatsun {
+            from {
+                transform: translateY(0px);
+            }
+
+            to {
+                transform: translateY(12px);
+            }
+        }
+
+        /* Temperature text */
+        .temp {
+            font-size: 42px;
+            font-weight: bold;
+            margin: 10px 0;
+            color: #ffffff;
+        }
+
+        /* Weekly Forecast Container with soft gradient background */
+        .forecast-section {
+            max-width: 450px;
+            margin: 25px auto;
+            padding: 20px;
+            border: 2px solid #70a1ff;
+            border-radius: 18px;
+            background-image: radial-gradient(circle at center, #2f3542, #1e272e);
+            color: #ffffff;
+        }
+
+        .forecast-section h3 {
+            color: #70a1ff;
+            margin-top: 0;
+        }
+
+        /* Each day row in the weekly forecast */
+        .day-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 15px;
+            margin: 8px 0;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>My Weather App</h1>
+    <p>Live Weather Updates & Weekly Forecast</p>
+
+    <!-- Main Today Card -->
+    <div class="weather-card">
+        <h2>Today's Weather</h2>
+        <div class="weather-icon">⛅</div>
+        <div class="temp">28°C</div>
+        <p><strong>City:</strong> Bengaluru</p>
+        <p><strong>Condition:</strong> Partly Cloudy</p>
+    </div>
+
+    <!-- Weekly Forecast Section -->
+    <div class="forecast-section">
+        <h3>Weekly Forecast</h3>
+
+        <div class="day-row">
+            <span>Monday</span>
+            <span>☀️ Sunny</span>
+            <span><strong>30°C</strong></span>
+        </div>
+
+        <div class="day-row">
+            <span>Tuesday</span>
+            <span>⛅ Cloudy</span>
+            <span><strong>27°C</strong></span>
+        </div>
+
+        <div class="day-row">
+            <span>Wednesday</span>
+            <span>🌧️ Rainy</span>
+            <span><strong>24°C</strong></span>
+        </div>
+
+        <div class="day-row">
+            <span>Thursday</span>
+            <span>💨 Windy</span>
+            <span><strong>26°C</strong></span>
+        </div>
+
+        <div class="day-row">
+            <span>Friday</span>
+            <span>⛈️ Stormy</span>
+            <span><strong>23°C</strong></span>
+        </div>
+    </div>
+
+</body>
+
+</html>

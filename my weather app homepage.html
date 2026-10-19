@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Weather App</title>
+
+    <style>
+        /* Universal selector for basic box-sizing and fonts */
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Page background with color, radial gradient pattern, and fixed attachment */
+        body {
+            background-color: #87ceeb;
+            background-image: radial-gradient(circle, white 2px, transparent 3px);
+            background-size: 40px 40px;
+            background-repeat: repeat;
+            background-position: top center;
+            background-attachment: fixed;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Main Weather Card with linear gradient */
+        .weather-card {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 3px solid white;
+            border-radius: 20px;
+            background-image: linear-gradient(to bottom right, #1e90ff, #87cefa);
+        }
+
+        /* Floating icon animation */
+        .weather-icon {
+            font-size: 50px;
+            animation: floatCloud 3s infinite alternate;
+        }
+
+        @keyframes floatCloud {
+            from {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(15px);
+            }
+        }
+
+        /* Forecast section styling */
+        .forecast-section {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 3px solid white;
+            border-radius: 15px;
+            background-color: #ffffff;
+            color: #003366;
+        }
+
+        .day {
+            padding: 8px;
+            margin: 5px 0;
+            background: #f0f8ff;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>My Weather App</h1>
+    <p>Check today's weather easily!</p>
+
+    <!-- Today's Weather Card -->
+    <div class="weather-card">
+        <h2>Today's Weather</h2>
+        <div class="weather-icon">☁️</div>
+        <p style="font-size: 40px; font-weight: bold;">28°C</p>
+        <p>City: Bengaluru</p>
+        <p>Condition: Partly Cloudy</p>
+    </div>
+
+    <!-- Weekly Forecast Section -->
+    <div class="forecast-section">
+        <h3>Next 5 Days</h3>
+        <div class="day">Monday: Sunny - 30°C</div>
+        <div class="day">Tuesday: Cloudy - 27°C</div>
+        <div class="day">Wednesday: Rainy - 24°C</div>
+        <div class="day">Thursday: Windy - 26°C</div>
+        <div class="day">Friday: Stormy - 23°C</div>
+    </div>
+
+</body>
+
+</html>
